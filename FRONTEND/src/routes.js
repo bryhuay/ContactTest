@@ -1,5 +1,13 @@
 import React from 'react';
 
+
+//Estas son los componentes declarados para las vistas solicitadas en la prueba
+const BasicForms = React.lazy(() => import('./views/base/forms/BasicForms'));
+const EditForm = React.lazy(() => import('./views/base/forms/Edit'));
+const List = React.lazy(() => import('./views/base/forms/List'));
+//Estas son los componentes declarados para las vistas solicitadas en la prueba
+
+
 const Toaster = React.lazy(() => import('./views/notifications/toaster/Toaster'));
 const Tables = React.lazy(() => import('./views/base/tables/Tables'));
 
@@ -7,9 +15,7 @@ const Breadcrumbs = React.lazy(() => import('./views/base/breadcrumbs/Breadcrumb
 const Cards = React.lazy(() => import('./views/base/cards/Cards'));
 const Carousels = React.lazy(() => import('./views/base/carousels/Carousels'));
 const Collapses = React.lazy(() => import('./views/base/collapses/Collapses'));
-const BasicForms = React.lazy(() => import('./views/base/forms/BasicForms'));
-const EditForm = React.lazy(() => import('./views/base/forms/Edit'));
-const List = React.lazy(() => import('./views/base/forms/List'));
+
 
 const Jumbotrons = React.lazy(() => import('./views/base/jumbotrons/Jumbotrons'));
 const ListGroups = React.lazy(() => import('./views/base/list-groups/ListGroups'));
@@ -41,10 +47,21 @@ const Users = React.lazy(() => import('./views/users/Users'));
 const User = React.lazy(() => import('./views/users/User'));
 
 const routes = [
+
+
+  //Estas son las rutas qdelcaradas para las vistas solicitadas en la prueba
   { path: '/', exact: true, name: 'Home' },
   { path: '/contact',exact:true, name: 'Contactos', component: List },
   { path: '/contact/new',exact:true, name: 'Crear', component: BasicForms },
   { path: '/contact/edit/:id',exact:true, name: 'Editar', component: EditForm },
+  //Estas son las rutas qdelcaradas para las vistas solicitadas en la prueba
+
+
+
+
+  
+  //Componentes de Reacstrap 
+
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/theme', name: 'Theme', component: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', component: Colors },
